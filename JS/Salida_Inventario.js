@@ -1,16 +1,16 @@
-var urlInventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/inventario.php?opcion=GetInventarios';
-var urlGetInventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/inventario.php?opcion=GetInventario';
-var urlPostInventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/inventario.php?opcion=InsertInventario';
-var urlPutInventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/inventario.php?opcion=UpdateInventario';
-var urlDeleteInventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/inventario.php?opcion=DeleteInventario';
+var urlSalida_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/salida_inventario.php?opcion=GetSalida_Inventarios';
+var urlGetSalida_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/salida_inventario.php?opcion=GetSalida_Inventario';
+var urlPostSalida_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/salida_inventario.php?opcion=InsertSalida_Inventario';
+var urlPutSalida_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/salida_inventario.php?opcion=UpdateSalida_Inventario';
+var urlDeleteSalida_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/salida_inventario.php?opcion=DeleteSalida_Inventario';
 
 $(document).ready(function(){
-    CargarInventarios();
+    CargarSalida_Inventarios();
 });
 
-function CargarInventarios(){
+function CargarSalida_Inventarios(){
     $.ajax({
-        url : urlInventario,
+        url : urlSalida_Inventario,
         type : 'GET',
         datatype : 'JSON',
         success : function(response){
@@ -19,54 +19,56 @@ function CargarInventarios(){
 
             for(i = 0; i < MiItems.length; i++){
                 Valores += '<tr>'+
-                '<td>' + MiItems[i].ID_INVENTARIO +'</td>'+
+                '<td>' + MiItems[i].ID_SALIDA_INVENTARIO +'</td>'+
+                '<td>' + MiItems[i].FECHA +'</td>'+
                 '<td>' + MiItems[i].ID_ARTICULO +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
-                '<td>' + MiItems[i].CANTIDAD +'</td>'+
-                '<td>' + MiItems[i].TIPO_INVENTARIO +'</td>'+
+		'<td>' + MiItems[i].CANTIDAD +'</td>'+
+                '<td>' + MiItems[i].MODIFICADO_POR +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarInventario(' + MiItems[i].ID_INVENTARIO + ')">Editar</button>' +
-                    '<button class="btn btn-danger" id="btneliminar" onclick="EliminarInventario(' + MiItems[i].ID_INVENTARIO + ')">Eliminar</button>' +
+                    '<button class="btn btn-info" onclick="CargarSalida_Inventario(' + MiItems[i].ID_SALIDA_INVENTARIO + ')">Editar</button>' +
+                    '<button class="btn btn-danger" id="btneliminar" onclick="EliminarSalida_Inventario(' + MiItems[i].ID_SALIDA_INVENTARIO + ')">Eliminar</button>' +
                 '</td>' +
                 
                 '</tr>';
-            $('.Inventarios').html(Valores);
+            $('.Salida_Inventarios').html(Valores);
             }
 
         }
     });
 }
 
-function CargarInventario(id_inventario){
-    var datosInventario = {
-        ID_INVENTARIO : id_inventario
+function CargarSalida_Inventario(id_salida_inventario){
+    var datosSalida_Inventario = {
+        ID_SALIDA_INVENTARIO : id_salida_inventario
     };
 
-    alert('Editar ID_INVENTARIO=' + id_inventario);
+    alert('Editar ID_SALIDA_INVENTARIO=' + id_salida_inventario);
 
-    var datosInventariojson = JSON.stringify(datosInventario);
+    var datosSalida_Inventariojson = JSON.stringify(datosSalida_Inventario);
 
     $.ajax({
-        url : urlGetInventario,
+        url : urlGetSalida_Inventario,
         type : 'POST',
-        data : datosInventariojson,
+        data : datosSalida_Inventariojson,
         dataType : 'JSON',
         contentType : 'application/json',
         success : function(response){
             var MiItems = response;
-            $('#ID_INVENTARIO').val(MiItems[0].ID_INVENTARIO);
+            $('#ID_SALIDA_INVENTARIO').val(MiItems[0].ID_SALIDA_INVENTARIO);
+            $('#FECHA').val(MiItems[0].FECHA);
             $('#ID_ARTICULO').val(MiItems[0].ID_ARTICULO);
             $('#NOMBRE').val(MiItems[0].NOMBRE);
-            $('#CANTIDAD').val(MiItems[0].CANTIDAD);
-            $('#TIPO_INVENTARIO').val(MiItems[0].TIPO_INVENTARIO);
+	    $('#CANTIDAD').val(MiItems[0].CANTIDAD);
+            $('#MODIFICADO_POR').val(MiItems[0].MODIFICADO_POR);
 
-            var btnactualizar = '<input type="submit" id="btnactualizar" onclick="ActualizarInventario(' + MiItems[0].ID_INVENTARIO + ')"' +
-            'value="Actualizar Inventario" class="btn btn-primary"></input>'
-            $('.btnInventario').html(btnactualizar);
+            var btnactualizar = '<input type="submit" id="btnactualizar" onclick="ActualizarSalida_Inventario(' + MiItems[0].ID_SALIDA_INVENTARIO + ')"' +
+            'value="Actualizar Salida_Inventario" class="btn btn-primary"></input>'
+            $('.btnSalida_Inventario').html(btnactualizar);
 
             var tituloactualizar = '<h3>' +
-                'Actualizar Inventario' +
+                'Actualizar Salida_Inventario' +
                 '</h3>';
            $('#tituloagregar').html(tituloactualizar);
             
@@ -74,21 +76,22 @@ function CargarInventario(id_inventario){
     });
 }
 
-function AgregarInventario(){
-    var datosInventario = {
-        ID_INVENTARIO : $('#ID_INVENTARIO').val(),
+function AgregarSalida_Inventario(){
+    var datosSalida_Inventario = {
+        ID_SALIDA_INVENTARIO : $('#ID_SALIDA_INVENTARIO').val(),
+        FECHA : $('#FECHA').val(),
         ID_ARTICULO : $('#ID_ARTICULO').val(),
         NOMBRE : $('#NOMBRE').val(),
-        CANTIDAD : $('#CANTIDAD').val(),
-        TIPO_INVENTARIO : $('#TIPO_INVENTARIO').val(),
+	    CANTIDAD : $('#CANTIDAD').val(),
+        MODIFICADO_POR : $('#MODIFICADO_POR').val(),
     };
 
-    var datosInventariojson = JSON.stringify(datosInventario);
+    var datosSalida_Inventariojson = JSON.stringify(datosSalida_Inventario);
 
     $.ajax({
-        url : urlPostInventario,
+        url : urlPostSalida_Inventario,
         type : 'POST',
-        data : datosInventariojson,
+        data : datosSalida_Inventariojson,
         dataType : 'JSON',
         contentType : 'application/json',
         
@@ -97,29 +100,30 @@ function AgregarInventario(){
         },
 
         error : function(){
-            alert('Error al Agregar el Inventario');
+            alert('Error al Agregar la Salida_Inventario');
         }
     });
     
-    alert('Inventario Agregado')
+    alert('Salida_Inventario Agregada')
 }
 
-function ActualizarInventario(id_inventario){
-    var datosInventario = {
-        ID_INVENTARIO : id_inventario,
-        NOMBRE : $('#NOMBRE').val(),
+function ActualizarSalida_Inventario(id_salida_inventario){
+    var datosSalida_Inventario = {
+        ID_SALIDA_INVENTARIO : id_salida_inventario,
+        ID_ARTICULO : $('#ID_ARTICULO').val(),
+        FECHA : $('#FECHA').val(),
         ID_ARTICULO : $('#ID_ARTICULO').val(),
         NOMBRE : $('#NOMBRE').val(),
-        CANTIDAD : $('#CANTIDAD').val(),
-        TIPO_INVENTARIO : $('#TIPO_INVENTARIO').val()
+	CANTIDAD : $('#CANTIDAD').val(),
+        MODIFICADO_POR : $('#MODIFICADO_POR').val()
     };
 
-    var datosInventariojson = JSON.stringify(datosInventario);
+    var datosSalida_Inventariojson = JSON.stringify(datosSalida_Inventario);
 
     $.ajax({
-        url : urlPutInventario,
+        url : urlPutSalida_Inventario,
         type : 'PUT',
-        data : datosInventariojson,
+        data : datosSalida_Inventariojson,
         dataType : 'JSON',
         contentType : 'application/json',
         
@@ -128,30 +132,30 @@ function ActualizarInventario(id_inventario){
         },
 
         error : function(){
-            alert('Error al Actualizar el Inventario');
+            alert('Error al Actualizar la Salida_Inventario');
         }
     });
     
-    alert('Inventario Actualizado')
+    alert('Salida_Inventario Actualizada')
 }
 
-function EliminarInventario(id_inventario){
-    var datosInventario = {
-        ID_INVENTARIO : id_inventario
+function EliminarSalida_Inventario(id_salida_inventario){
+    var datosSalida_Inventario = {
+        ID_SALIDA_INVENTARIO : id_salida_inventario
     };
 
-    alert('Eliminar ID_INVENTARIO=' + id_inventario);
+    alert('Eliminar ID_SALIDA_INVENTARIO=' + id_salida_inventario);
 
-    var datosInventariojson = JSON.stringify(datosInventario);
+    var datosSalida_Inventariojson = JSON.stringify(datosSalida_Inventario);
 
     $.ajax({
-        url : urlDeleteInventario,
+        url : urlDeleteSalida_Inventario,
         type : 'DELETE',
-        data : datosInventariojson,
+        data : datosSalida_Inventariojson,
         dataType : 'JSON',
         contentType : 'application/json',
         success : function(response){
-            alert('Inventario Eliminado');
+            alert('Salida_Inventario Eliminada');
             location.reload();
         }
     });  

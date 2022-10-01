@@ -4,75 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inventario</title>
+    <title>Salida Inventario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/JS/Inventario.js"></script>
+    <script src="/JS/Salida_Inventario.js"></script>
 
 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--Barra de Navegacion-->
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                  <img src="https://static.wixstatic.com/media/de548f_e58cace9152d49ffb94d1146bae61951~mv2.jpg/v1/fill/w_240,h_96,al_c,q_80,usm_1.20_1.00_0.01,enc_auto/Logo%20UMH%20imagen.jpg" alt="" width="150">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/Home.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Administración
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/Formularios/Categoria.html">Categoria</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Marca.html">Marca</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Articulo.html">Articulo</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Rol.html">Rol</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Usuario.html">Usuario</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Bitacora.html">Bitacora</a></li>
-                    </ul>
-                    
-                  </li>
-    
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Proceso Inventario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/Formularios/Inventario.html">Control Inventario</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Entrada_Inventario.html">Entrada Inventario</a></li>
-                      <li><a class="dropdown-item" href="/Formularios/Salida_Inventario.html">Salida Inventario</a></li>
-    
-                      
-                    </ul>
-                    
-                  </li>
-                  
+      <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--Barra de Navegacion-->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="https://static.wixstatic.com/media/de548f_e58cace9152d49ffb94d1146bae61951~mv2.jpg/v1/fill/w_240,h_96,al_c,q_80,usm_1.20_1.00_0.01,enc_auto/Logo%20UMH%20imagen.jpg" alt="" width="150">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Administración
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/Formularios/Categoria.html">Categoria</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Marca.html">Marca</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Articulo.html">Articulo</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Rol.html">Rol</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Usuario.html">Usuario</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Bitacora.html">Bitacora</a></li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+                
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Proceso Inventario
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/Formularios/Inventario.html">Control Inventario</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Salida_Inventario.html">Salida Inventario</a></li>
+                  <li><a class="dropdown-item" href="/Formularios/Salida_Inventario.html">Salida Inventario</a></li>
+                </ul>
+                
+              </li>
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
     <div class="container">
         <div class="consulta mt-4">
             <div class="row">
                 <div class="col-6">
                     <h3>
-                        Lista de salida de inventario
+                        Lista de salidas de inventario
                     </h3>
                 </div>
                 <div class="box-body">
@@ -80,15 +78,16 @@
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th class="table-dark">ID_ENTRADA</th>
+                                    <th class="table-dark">ID_SALIDA_INVENTARIO</th>
+                                    <th class="table-dark">FECHA</th>
                                     <th class="table-dark">ID_ARTICULO</th>
                                     <th class="table-dark">NOMBRE</th>
                                     <th class="table-dark">CANTIDAD</th>
-                                    <th class="table-dark">TIPO_INVENTARIO</th>
+                                    <th class="table-dark">MODIFICADO_POR</th>
                                     <th class="table-dark">ACCION</th>
                                 </tr>
                             </thead>
-                            <tbody class="Inventarios">
+                            <tbody class="Salida_Inventarios">
                                       
                             </tbody>
                         </table>
@@ -105,16 +104,18 @@
                 </div>
                 <div class="col-12">
                     <form class="Factura">
-                        <label for="">Id de salida inventario</label>
-                        <input type="text" id="ID_INVENTARIO" class="form-control" placeholder="Ingrese el ID del Inventario">
-                        <label for="">Id de salida articulo</label>
-                        <input type="text" id="ID_ARTICULO" class="form-control" placeholder="Ingrese el nombre del Articulo">
-                        <label for="">Nombre de salida  articulo</label>
-                        <input type="text" id="NOMBRE" class="form-control" placeholder="Ingrese un nombre">
-			                  <label for="">Ingrese la Cantidad de salida</label>
-                        <input type="text" id="CANTIDAD" class="form-control" placeholder="Ingrese la cantidad del inventario">
-			                  <label for="">Tipo de salida inventario</label>
-                        <input type="text" id="TIPO_INVENTARIO" class="form-control" placeholder="Ingrese el Tipo de Inventario">
+                        <label for="">Id de la salida</label>
+                        <input type="text" id="ID_SALIDA_INVENTARIO" class="form-control" placeholder="Ingrese el ID de la salida">
+                        <label for="">Fecha de la salida</label>
+                        <input type="text" id="FECHA" class="form-control" placeholder="Ingrese la fecha">
+                        <label for="">Id del articulo</label>
+                        <input type="text" id="ID_ARTICULO" class="form-control" placeholder="Ingrese el Id del articulo">
+			                  <label for="">Nombre del articulo</label>
+                        <input type="text" id="NOMBRE" class="form-control" placeholder="Ingrese el nombre del articulo">
+                        <label for="">Cantidad de articulos</label>
+                        <input type="text" id="CANTIDAD" class="form-control" placeholder="Ingrese la cantidad del articulo">
+			                  <label for="">Quien modifica el articulo</label>
+                        <input type="text" id="MODIFICADO_POR" class="form-control" placeholder="Nombre del responsable">
                         <hr>
                             <div class="btninventario">
                                 <input type="submit" id="btnagregar" onclick="Agregarinventario()" value="Ingresar inventario" class="btn btn-success"></input>                           
