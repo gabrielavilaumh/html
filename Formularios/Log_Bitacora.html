@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoria</title>
+    <title>log_bitacora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/JS/Categoria.js"></script>
+    <script src="/JS/log_Bitacora.js"></script>
 
 
 </head>
@@ -40,7 +40,7 @@
                   <li><a class="dropdown-item" href="/Formularios/Rol.html">Rol</a></li>
                   <li><a class="dropdown-item" href="/Formularios/Usuario.html">Usuario</a></li>
                   <li><a class="dropdown-item" href="/Formularios/Bitacora.html">Bitacora</a></li>
-		              <li><a class="dropdown-item" href="/Formularios/Log_Bitacora.html">Log_Bitacora</a></li>
+		          <li><a class="dropdown-item" href="/Formularios/Log_Bitacora.html">Log_Bitacora</a></li>
                 </ul>
                 
               </li>
@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-6">
                     <h3>
-                        Lista de Categorias
+                        Lista de log_bitacoras
                     </h3>
                 </div>
                 <div class="box-body">
@@ -81,12 +81,14 @@
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th class="table-dark">ID</th>
-                                    <th class="table-dark">CATEGORIA</th>
+                                    <th class="table-dark">ID_LOG</th>
+                                    <th class="table-dark">FECHA</th>
                                     <th class="table-dark">ACCION</th>
+                                    <th class="table-dark">FORMULARIO</th>
+                                    <th class="table-dark">USUARIO</th>
                                 </tr>
                             </thead>
-                            <tbody class="Categorias">
+                            <tbody class="Log_Bitacoras">
                                       
                             </tbody>
                         </table>
@@ -97,24 +99,33 @@
         <div class="formulario">
             <div class="row">
                 <div class="col-12" id="tituloagregar">
+                   
+                  
                     <h3>
-                        Agregar Categoria
+                        Agregar log_bitacora
                     </h3>
                 </div>
                 <div class="col-12">
                     <form class="Factura">
-                        <label for="">Id de la Categoria</label>
-                        <input type="text" id="ID_CATEGORIA" class="form-control" placeholder="Ingrese el ID de la Categoria">
-                        <label for="">Nombre de la Categoria</label>
-                        <input type="text" id="NOMBRE" class="form-control" placeholder="Ingrese el nombre de la Categoria">
+                        <label for="">Id del log_bitacora</label>
+                        <input type="text" id="ID_LOG" class="form-control" placeholder="Ingrese el Id_Log">
+                        <label for="">Fecha</label>
+                        <input type="text"FECHA" class="form-control" placeholder="Ingrese la fecha">
+                        <label for="">Accion</label>
+                        <input type="text" id="ACCION" class="form-control" placeholder="Accion realizada">
+			            <label for="">Formulario</label>
+                        <input type="text" id="FORMULARIO" class="form-control" placeholder="Formulario Manipulado">
+			            <label for="">Responsable</label>
+                        <input type="text" id="USUARIO" class="form-control" placeholder="Responsable de la acción">
                         <hr>
-                            <div class="btnCategoria">
-                                <input type="submit" id="btnagregar" onclick="AgregarCategoria()" value="Ingresar Categoria" class="btn btn-success"></input>                           
+                            <div class="btnlog_bitacora">
+                                <input type="submit" id="btnagregar" onclick="Agregarlog_bitacora()" value="Ingresar log_bitacora" class="btn btn-success"></input>                           
                             </div>
                         <hr>
                     </form>
                 </div>
             </div>
+        
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 

@@ -1,4 +1,4 @@
-var urlCategoria = 'http://192.168.0.15:80/Proyecto_Inventario/controller/categoria.php?opcion=GetCategorias';
+var urlCategoria = 'http://127.0.0.1:80/Proyecto_Inventario/controller/categoria.php?opcion=GetCategorias';
 var urlGetCategoria = 'http://192.168.0.15:80/Proyecto_Inventario/controller/categoria.php?opcion=GetCategoria';
 var urlPostCategoria = 'http://192.168.0.15:80/Proyecto_Inventario/controller/categoria.php?opcion=InsertCategoria';
 var urlPutCategoria = 'http://192.168.0.15:80/Proyecto_Inventario/controller/categoria.php?opcion=UpdateCategoria';

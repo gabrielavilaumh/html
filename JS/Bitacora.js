@@ -1,4 +1,4 @@
-var urlBitacora = 'http://192.168.0.15:80/Proyecto_Inventario/controller/bitacora.php?opcion=GetBitacoras';
+var urlBitacora = 'http://127.0.0.1:80/Proyecto_Inventario/controller/bitacora.php?opcion=GetBitacoras';
 var urlGetBitacora = 'http://192.168.0.15:80/Proyecto_Inventario/controller/bitacora.php?opcion=GetBitacora';
 var urlPostBitacora = 'http://192.168.0.15:80/Proyecto_Inventario/controller/bitacora.php?opcion=InsertBitacora';
 var urlPutBitacora = 'http://192.168.0.15:80/Proyecto_Inventario/controller/bitacora.php?opcion=UpdateBitacora';
