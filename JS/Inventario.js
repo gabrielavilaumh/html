@@ -80,7 +80,7 @@ function AgregarInventario(){
         ID_ARTICULO : $('#ID_ARTICULO').val(),
         NOMBRE : $('#NOMBRE').val(),
         CANTIDAD : $('#CANTIDAD').val(),
-        TIPO_INVENTARIO : $('#TIPO_INVENTARIO').val(),
+        TIPO_INVENTARIO : $('#TIPO_INVENTARIO').val()
     };
 
     var datosInventariojson = JSON.stringify(datosInventario);
