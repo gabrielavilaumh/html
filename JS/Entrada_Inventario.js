@@ -60,7 +60,7 @@ function CargarEntrada_Inventario(id_entrada_inventario){
             $('#FECHA').val(MiItems[0].FECHA);
             $('#ID_ARTICULO').val(MiItems[0].ID_ARTICULO);
             $('#NOMBRE').val(MiItems[0].NOMBRE);
-	    $('#CANTIDAD').val(MiItems[0].CANTIDAD);
+	        $('#CANTIDAD').val(MiItems[0].CANTIDAD);
             $('#MODIFICADO_POR').val(MiItems[0].MODIFICADO_POR);
 
             var btnactualizar = '<input type="submit" id="btnactualizar" onclick="ActualizarEntrada_Inventario(' + MiItems[0].ID_ENTRADA_INVENTARIO + ')"' +
@@ -110,11 +110,10 @@ function AgregarEntrada_Inventario(){
 function ActualizarEntrada_Inventario(id_entrada_inventario){
     var datosEntrada_Inventario = {
         ID_ENTRADA_INVENTARIO : id_entrada_inventario,
-        ID_ARTICULO : $('#ID_ARTICULO').val(),
         FECHA : $('#FECHA').val(),
         ID_ARTICULO : $('#ID_ARTICULO').val(),
         NOMBRE : $('#NOMBRE').val(),
-	CANTIDAD : $('#CANTIDAD').val(),
+	    CANTIDAD : $('#CANTIDAD').val(),
         MODIFICADO_POR : $('#MODIFICADO_POR').val()
     };
 
