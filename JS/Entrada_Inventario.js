@@ -23,7 +23,7 @@ function CargarEntrada_Inventarios(){
                 '<td>' + MiItems[i].FECHA +'</td>'+
                 '<td>' + MiItems[i].ID_ARTICULO +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
-		'<td>' + MiItems[i].CANTIDAD +'</td>'+
+	        	'<td>' + MiItems[i].CANTIDAD +'</td>'+
                 '<td>' + MiItems[i].MODIFICADO_POR +'</td>'+
                 
                 '<td>' +
