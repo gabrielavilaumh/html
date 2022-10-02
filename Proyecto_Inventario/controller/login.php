@@ -13,15 +13,15 @@
     header('Content-Type: application/json');
 
     require_once("../config/conexion.php");
-    require_once("../models/Usuario.php");
-    $login = new Usuario();
+    require_once("../models/Login.php");
+    $login = new Login();
     
     $body = json_decode(file_get_contents("php://input"), true);
 
     switch ($_GET["opcion"]){
 
         case "GetLogin":
-            $datos = $login -> get_usuario($body["ID_USUARIO"]);
+            $datos = $login -> get_login($body["USUARIO"], $body["PASS"]);
             echo json_encode($datos);
         break;
          
