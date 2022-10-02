@@ -23,7 +23,7 @@
         public function insert_entrada_inventario($id_entrada_inventario, $fecha, $id_articulo, $nombre, $cantidad, $modificado_por){
             $conectar = parent::conexion();
             parent::set_names();
-            $sql = "INSERT INTO ENTRADA_INVENTARIO(ID_ENTRADA_INVENTARIO, FECHA, ID_ARTICULO, NOMBRE, CANTIDAD, MODIFICADO POR)
+            $sql = "INSERT INTO ENTRADA_INVENTARIO(ID_ENTRADA_INVENTARIO, FECHA, ID_ARTICULO, NOMBRE, CANTIDAD, MODIFICADO_POR)
             VALUES(?,?,?,?,?,?);";
             $sql = $conectar -> prepare($sql);
             $sql -> bindValue(1, $id_entrada_inventario);
