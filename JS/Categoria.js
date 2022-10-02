@@ -16,8 +16,10 @@ function CargarCategorias(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
+            var contador = 1;
 
             for(i = 0; i < MiItems.length; i++){
+                contador+= 1;
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_CATEGORIA +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
@@ -29,6 +31,7 @@ function CargarCategorias(){
                 
                 '</tr>';
             $('.Categorias').html(Valores);
+            $('#ID_CATEGORIA').val(contador)
             }
 
         }

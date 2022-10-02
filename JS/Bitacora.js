@@ -16,7 +16,7 @@ function CargarBitacoras(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
-
+            
             for(i = 0; i < MiItems.length; i++){
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_BITACORA +'</td>'+

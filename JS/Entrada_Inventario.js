@@ -16,8 +16,10 @@ function CargarEntrada_Inventarios(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
+            var contador =1;
 
             for(i = 0; i < MiItems.length; i++){
+                contador+=1;
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_ENTRADA_INVENTARIO +'</td>'+
                 '<td>' + MiItems[i].FECHA +'</td>'+
@@ -33,6 +35,7 @@ function CargarEntrada_Inventarios(){
                 
                 '</tr>';
             $('.Entrada_Inventarios').html(Valores);
+            $('#ID_ENTRADA_INVENTARIO').val(contador)
             }
 
         }

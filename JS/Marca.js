@@ -16,8 +16,9 @@ function CargarMarcas(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
-
+            var contador = 1;
             for(i = 0; i < MiItems.length; i++){
+                contador+=1;
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_MARCA +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
@@ -29,6 +30,7 @@ function CargarMarcas(){
                 
                 '</tr>';
             $('.Marcas').html(Valores);
+            $('#ID_MARCA').val(contador);
             }
 
         }

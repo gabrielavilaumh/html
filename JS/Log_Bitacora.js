@@ -13,8 +13,10 @@ function CargarLog_Bitacoras(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
+            var contador = 1;
 
             for(i = 0; i < MiItems.length; i++){
+                contador+= 1;
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_LOG +'</td>'+
                 '<td>' + MiItems[i].FECHA +'</td>'+
@@ -29,6 +31,7 @@ function CargarLog_Bitacoras(){
                 */
                 '</tr>';
             $('.Log_Bitacoras').html(Valores);
+            $('#ID_LOG').val(contador);
             }
 
         }

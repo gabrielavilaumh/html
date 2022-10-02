@@ -16,8 +16,10 @@ function CargarArticulos(){
         success : function(response){
             var MiItems = response;
             var Valores = '';
+            var contador =1;
 
             for(i = 0; i < MiItems.length; i++){
+                contador+=1;
                 Valores += '<tr>'+
                 '<td>' + MiItems[i].ID_ARTICULO +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
@@ -32,6 +34,7 @@ function CargarArticulos(){
                 
                 '</tr>';
             $('.Articulos').html(Valores);
+            $('#ID_ARTICULO').val(contador)
             }
 
         }
