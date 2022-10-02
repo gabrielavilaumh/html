@@ -31,7 +31,7 @@ function validarAcceso(){
                 var MiItems = response;
      
                 if (usuario == MiItems[0].USUARIO && pass == MiItems[0].PASS){
-                    window.open("http://192.168.0.15:80/Home.html", "_self")
+                    window.open("http://192.168.0.15/Home.html", "_self")
                 }
         
             },
