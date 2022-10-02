@@ -23,7 +23,7 @@ function CargarSalida_Inventarios(){
                 '<td>' + MiItems[i].FECHA +'</td>'+
                 '<td>' + MiItems[i].ID_ARTICULO +'</td>'+
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
-		'<td>' + MiItems[i].CANTIDAD +'</td>'+
+		        '<td>' + MiItems[i].CANTIDAD +'</td>'+
                 '<td>' + MiItems[i].MODIFICADO_POR +'</td>'+
                 
                 '<td>' +
@@ -60,7 +60,7 @@ function CargarSalida_Inventario(id_salida_inventario){
             $('#FECHA').val(MiItems[0].FECHA);
             $('#ID_ARTICULO').val(MiItems[0].ID_ARTICULO);
             $('#NOMBRE').val(MiItems[0].NOMBRE);
-	    $('#CANTIDAD').val(MiItems[0].CANTIDAD);
+	        $('#CANTIDAD').val(MiItems[0].CANTIDAD);
             $('#MODIFICADO_POR').val(MiItems[0].MODIFICADO_POR);
 
             var btnactualizar = '<input type="submit" id="btnactualizar" onclick="ActualizarSalida_Inventario(' + MiItems[0].ID_SALIDA_INVENTARIO + ')"' +
@@ -110,11 +110,10 @@ function AgregarSalida_Inventario(){
 function ActualizarSalida_Inventario(id_salida_inventario){
     var datosSalida_Inventario = {
         ID_SALIDA_INVENTARIO : id_salida_inventario,
-        ID_ARTICULO : $('#ID_ARTICULO').val(),
         FECHA : $('#FECHA').val(),
         ID_ARTICULO : $('#ID_ARTICULO').val(),
         NOMBRE : $('#NOMBRE').val(),
-	CANTIDAD : $('#CANTIDAD').val(),
+	    CANTIDAD : $('#CANTIDAD').val(),
         MODIFICADO_POR : $('#MODIFICADO_POR').val()
     };
 
