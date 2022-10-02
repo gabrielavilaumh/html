@@ -1,4 +1,4 @@
-var urlPostLog_Bitacora = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/registrar_log.php?opcion=InsertLog_Bitacora';
+var urlPostLog_Bitacora = 'http://192.168.0.15:80/Proyecto_Inventario/controller/registrar_log.php?opcion=InsertLog_Bitacora';
 
 function Ingresar_Log(fecha, accion, formulario, usuario){
 
