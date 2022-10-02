@@ -1,8 +1,8 @@
-var urlArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulos';
-var urlGetArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulo';
-var urlPostArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=InsertArticulo';
-var urlPutArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=UpdateArticulo';
-var urlDeleteArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=DeleteArticulo';
+var urlArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulos';
+var urlGetArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulo';
+var urlPostArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=InsertArticulo';
+var urlPutArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=UpdateArticulo';
+var urlDeleteArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=DeleteArticulo';
 
 $(document).ready(function(){
     CargarArticulos();
@@ -26,8 +26,8 @@ function CargarArticulos(){
                 '<td>' + MiItems[i].ID_MARCA +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarArticulo(' + MiItems[i].ID_ARTICULO + ')">Editar</button>' +
-                    '<button class="btn btn-danger" id="btneliminar" onclick="EliminarArticulo(' + MiItems[i].ID_ARTICULO + ')">Eliminar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarArticulo(' + MiItems[i].ID_ARTICULO + ')">Editar</button>' +
+                    '<button class="btn btn-danger flex-grow-1 m-1" id="btneliminar" onclick="EliminarArticulo(' + MiItems[i].ID_ARTICULO + ')">Eliminar</button>' +
                 '</td>' +
                 
                 '</tr>';

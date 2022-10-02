@@ -8,14 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
-
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/JS/Articulo.js"></script>
 
 
 </head>
 <body>
-    <header>
+    <header  class="animate__animated animate__bounce">
       <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--Barra de Navegacion-->
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -60,10 +65,7 @@
               </li>
               
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+
           </div>
         </div>
       </nav>
@@ -73,12 +75,11 @@
             <div class="row">
                 <div class="col-6">
                     <h3>
-                        Lista de Articulos
-                    </h3>
+                        Lista de articulos
                 </div>
                 <div class="box-body">
                     <div class="table table-responsive">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-light table-striped table-borderless" style="text-align:center;">
                             <thead>
                                 <tr>
                                     <th class="table-dark">ID</th>
@@ -107,9 +108,9 @@
                 <div class="col-12">
                     <form class="Factura">
                         <label for="">Id de Articulo</label>
-                        <input type="text" id="ID_ARTICULO" class="form-control" placeholder="Ingrese el ID de la Articulo">
+                        <input disabled="disabled" type="label" id="ID_ARTICULO" class="form-control">
                         <label for="">Nombre del Articulo</label>
-                        <input type="text" id="NOMBRE" class="form-control" placeholder="Ingrese el nombre de la Articulo">
+                        <input type="text"  id="NOMBRE" class="form-control" placeholder="Ingrese el nombre de la Articulo">
                         <label for="">Nombre_Corto</label>
                         <input type="text" id="NOMBRE_CORTO" class="form-control" placeholder="Ingrese un nombre corto">
 			                  <label for="">Id de la Categoria</label>

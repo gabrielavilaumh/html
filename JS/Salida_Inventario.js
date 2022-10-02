@@ -27,7 +27,7 @@ function CargarSalida_Inventarios(){
                 '<td>' + MiItems[i].MODIFICADO_POR +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarSalida_Inventario(' + MiItems[i].ID_SALIDA_INVENTARIO + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarSalida_Inventario(' + MiItems[i].ID_SALIDA_INVENTARIO + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarSalida_Inventario(' + MiItems[i].ID_SALIDA_INVENTARIO + ')">Eliminar</button>' +
                 '</td>' +
                 

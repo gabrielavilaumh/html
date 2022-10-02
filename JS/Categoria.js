@@ -23,7 +23,7 @@ function CargarCategorias(){
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarCategoria(' + MiItems[i].ID_CATEGORIA + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarCategoria(' + MiItems[i].ID_CATEGORIA + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarCategoria(' + MiItems[i].ID_CATEGORIA + ')">Eliminar</button>' +
                 '</td>' +
                 

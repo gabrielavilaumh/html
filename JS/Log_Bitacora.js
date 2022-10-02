@@ -1,6 +1,6 @@
-var urlLog_Bitacora = 'http://127.0.0.1:80/Proyecto_Inventario/controller/log_bitacora.php?opcion=GetLog_Bitacoras';
-var urlGetLog_Bitacora = 'http://127.0.0.1:80/Proyecto_Inventario/controller/log_bitacora.php?opcion=GetLog_Bitacora';
-var urlPostLog_Bitacora = 'http://127.0.0.1:80/Proyecto_Inventario/controller/log_bitacora.php?opcion=InsertLog_Bitacora';
+var urlLog_Bitacora = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/log_bitacora.php?opcion=GetLog_Bitacoras';
+var urlGetLog_Bitacora = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/log_bitacora.php?opcion=GetLog_Bitacora';
+var urlPostLog_Bitacora = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/log_bitacora.php?opcion=InsertLog_Bitacora';
 
 $(document).ready(function(){
     CargarLog_Bitacoras();

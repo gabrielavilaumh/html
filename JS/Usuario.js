@@ -24,7 +24,7 @@ function CargarUsuarios(){
                 '<td>' + MiItems[i].ID_ROL +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarUsuario(' + MiItems[i].ID_USUARIO + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarUsuario(' + MiItems[i].ID_USUARIO + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarUsuario(' + MiItems[i].ID_USUARIO + ')">Eliminar</button>' +
                 '</td>' +
                 

@@ -27,7 +27,7 @@ function CargarEntrada_Inventarios(){
                 '<td>' + MiItems[i].MODIFICADO_POR +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarEntrada_Inventario(' + MiItems[i].ID_ENTRADA_INVENTARIO + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarEntrada_Inventario(' + MiItems[i].ID_ENTRADA_INVENTARIO + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarEntrada_Inventario(' + MiItems[i].ID_ENTRADA_INVENTARIO + ')">Eliminar</button>' +
                 '</td>' +
                 

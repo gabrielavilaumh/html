@@ -26,7 +26,7 @@ function CargarInventarios(){
                 '<td>' + MiItems[i].TIPO_INVENTARIO +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarInventario(' + MiItems[i].ID_INVENTARIO + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarInventario(' + MiItems[i].ID_INVENTARIO + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarInventario(' + MiItems[i].ID_INVENTARIO + ')">Eliminar</button>' +
                 '</td>' +
                 

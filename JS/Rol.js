@@ -23,7 +23,7 @@ function CargarRoles(){
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarRol(' + MiItems[i].ID_ROL + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarRol(' + MiItems[i].ID_ROL + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarRol(' + MiItems[i].ID_ROL + ')">Eliminar</button>' +
                 '</td>' +
                 

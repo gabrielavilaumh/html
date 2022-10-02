@@ -23,7 +23,7 @@ function CargarMarcas(){
                 '<td>' + MiItems[i].NOMBRE +'</td>'+
                 
                 '<td>' +
-                    '<button class="btn btn-info" onclick="CargarMarca(' + MiItems[i].ID_MARCA + ')">Editar</button>' +
+                    '<button class="btn btn-info flex-grow-1 m-1" onclick="CargarMarca(' + MiItems[i].ID_MARCA + ')">Editar</button>' +
                     '<button class="btn btn-danger" id="btneliminar" onclick="EliminarMarca(' + MiItems[i].ID_MARCA + ')">Eliminar</button>' +
                 '</td>' +
                 
