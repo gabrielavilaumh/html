@@ -1,8 +1,8 @@
-var urlArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulos';
-var urlGetArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulo';
-var urlPostArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=InsertArticulo';
-var urlPutArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=UpdateArticulo';
-var urlDeleteArticulo = 'http://127.0.0.1:80/Proyecto_Inventario/controller/articulo.php?opcion=DeleteArticulo';
+var urlArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulos';
+var urlGetArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=GetArticulo';
+var urlPostArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=InsertArticulo';
+var urlPutArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=UpdateArticulo';
+var urlDeleteArticulo = 'http://192.168.0.15:80/Proyecto_Inventario/controller/articulo.php?opcion=DeleteArticulo';
 
 $(document).ready(function(){
     CargarArticulos();

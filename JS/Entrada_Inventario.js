@@ -1,8 +1,8 @@
-var urlEntrada_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/entrada_inventario.php?opcion=GetEntrada_Inventarios';
-var urlGetEntrada_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/entrada_inventario.php?opcion=GetEntrada_Inventario';
-var urlPostEntrada_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/entrada_inventario.php?opcion=InsertEntrada_Inventario';
-var urlPutEntrada_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/entrada_inventario.php?opcion=UpdateEntrada_Inventario';
-var urlDeleteEntrada_Inventario = 'http://127.0.0.1:80/html/Proyecto_Inventario/controller/entrada_inventario.php?opcion=DeleteEntrada_Inventario';
+var urlEntrada_Inventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/entrada_inventario.php?opcion=GetEntrada_Inventarios';
+var urlGetEntrada_Inventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/entrada_inventario.php?opcion=GetEntrada_Inventario';
+var urlPostEntrada_Inventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/entrada_inventario.php?opcion=InsertEntrada_Inventario';
+var urlPutEntrada_Inventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/entrada_inventario.php?opcion=UpdateEntrada_Inventario';
+var urlDeleteEntrada_Inventario = 'http://192.168.0.15:80/Proyecto_Inventario/controller/entrada_inventario.php?opcion=DeleteEntrada_Inventario';
 
 $(document).ready(function(){
     CargarEntrada_Inventarios();
